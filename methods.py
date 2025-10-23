@@ -1,6 +1,6 @@
 # methods.py
 # A simple list of session lengths stored as strings for display.
-# When the user picks one, we return it as an integer to the caller.
+# When the user pick one, return it as an integer to the caller.
 
 PRESET_STRINGS = ["15", "25", "50", "60", "90"]  # displayed as strings
 
