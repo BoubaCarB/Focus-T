@@ -4,7 +4,7 @@
 
 PRESET_STRINGS = ["15", "25", "50", "60", "90"]  # displayed as strings
 
-def choose_minutes_from_presets():
+def choose_mins_presets():
     """Print the preset strings, ask the user to pick one, and return minutes as int."""
     print("Choose a session length:")
     for i, s in enumerate(PRESET_STRINGS, start=1):

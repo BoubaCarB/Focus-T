@@ -2,7 +2,7 @@
 import time # for the time running
 import threading # allow user unput while backround running
 
-class FocusTimer:
+class Timer:
     def __init__(self):
         self.paused = False
         self._stop_input_thread = False

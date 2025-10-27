@@ -2,7 +2,7 @@
 import tkinter as tk
 import threading
 from tkinter import simpledialog
-from timer import FocusTimer
+from timer import Timer
 
 root = tk.Tk()
 root.title("FocusT")
@@ -22,7 +22,7 @@ def start_timer():
     if minutes is None:
         return
     # Run your timer in the background so the window stays responsive
-    t = FocusTimer()
+    t = Timer()
     threading.Thread(target=t.start, args=(minutes,), daemon=True).start()
     
 timer_btn = tk.Button(root, text="Timer", width=12, command=start_timer)

@@ -1,7 +1,7 @@
 # main
 
-from timer import FocusTimer
-
+from timer import Timer
+from methods import choose_mins_presets
 
 def get_minutes():
     print("Choose mode:")
@@ -20,9 +20,9 @@ def get_minutes():
         print("Please enter 1 or 2.")
 
 def main():
-    print("=== FocusTrack — Timer ===")
+    print("=== FocusT — Timer ===")
     minutes = get_minutes()
-    t = FocusTimer()
+    t = Timer()
     t.start(minutes)
 
 if __name__ == "__main__":
