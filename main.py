@@ -1,6 +1,7 @@
-# main.py (small change)
+# main
+
 from timer import FocusTimer
-from methods import choose_minutes_from_presets  # add this import
+
 
 def get_minutes():
     print("Choose mode:")
@@ -9,7 +10,7 @@ def get_minutes():
     while True:
         mode = input("Select 1 or 2: ").strip()
         if mode == "1":
-            return choose_minutes_from_presets()
+            return choose_mins_presets()
         if mode == "2":
             while True:
                 raw = input("Enter mins: ").strip()
