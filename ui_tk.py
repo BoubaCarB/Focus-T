@@ -17,11 +17,11 @@ welcome_label = tk.Label(
 )
 
 def start_timer():
-    # Ask for minutes (simple popup). Cancel returns None.
+    # Ask for minutes; Cancel returns None.
     minutes = simpledialog.askinteger("Start Timer", "Minutes:", minvalue=1)
     if minutes is None:
         return
-    # Run your timer in the background so the window stays responsive
+    # Run  timer in the background so the window stays responsive
     t = Timer()
     threading.Thread(target=t.start, args=(minutes,), daemon=True).start()
     

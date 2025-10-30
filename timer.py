@@ -17,12 +17,12 @@ class Timer:
 
     def _render_time(self, mins, secs):
         if self.paused:
-            print(f"\r{mins:02d}:{secs:02d}  [Paused]  ", end="")
+            print(f"\r{mins:02d}:{secs:02d}  Paused  ", end="")
         else:
             print(f"\r{mins:02d}:{secs:02d}          ", end="")
 
     def start(self, minutes):
-        """Count down from given minutes to 00:00 and show each second."""
+        """Count down from given minutes to 00:00 ."""
         total_seconds = minutes * 60  # 
 
         input_thread = threading.Thread(target=self._input_listener, daemon=True)

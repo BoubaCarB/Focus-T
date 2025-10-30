@@ -17,4 +17,4 @@ def choose_mins_presets():
             if 1 <= idx <= len(PRESET_STRINGS):
                 # convert the chosen string into int and return
                 return int(PRESET_STRINGS[idx - 1])
-        print("Please choose a valid option (enter the option number).")
+        print("Please choose a valid option ")

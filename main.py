@@ -17,7 +17,7 @@ def get_minutes():
                 if raw.isdigit() :
                     return int(raw)
                 print("Positive whole number.")
-        print("Please enter 1 or 2.")
+        print(" Enter 1 or 2.")
 
 def main():
     print("=== FocusT — Timer ===")
