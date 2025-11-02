@@ -5,6 +5,7 @@ import threading # allow user unput while backround running
 class Timer:
     def __init__(self):
         self.paused = False
+        self.cancel = False
         self._stop_input_thread = False
 
     def _input_listener(self):
@@ -14,10 +15,13 @@ class Timer:
                 self.paused = True
             elif user_input == 'r':
                 self.paused = False
-
+            elif user_input == "c":
+                self.cancel = True
     def _render_time(self, mins, secs):
         if self.paused:
             print(f"\r{mins:02d}:{secs:02d}  Paused  ", end="")
+        if self.cancel:
+            print(f"\r{mins:02d}:{secs:02d}  Canceled  ", end="")
         else:
             print(f"\r{mins:02d}:{secs:02d}          ", end="")
 
@@ -28,7 +32,7 @@ class Timer:
         input_thread = threading.Thread(target=self._input_listener, daemon=True)
         input_thread.start()
 
-        print("Controls: Press 'P' + Enter to Pause, 'R' + Enter to Resume")
+        print("Controls: Press 'P' + Enter to Pause, 'R' + Enter to Resume, 'C' To Cancel" )
 
         while total_seconds >= 0:
             mins, secs = divmod(total_seconds, 60)
@@ -36,6 +40,8 @@ class Timer:
             if not self.paused:
                 time.sleep(0.01)
                 total_seconds -= 1
+            if self.cancel:
+                break
             else:
                 time.sleep(0.01)
                 continue
