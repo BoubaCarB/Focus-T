@@ -1,6 +1,6 @@
 # FocusTrack (Study Timer App)
 
-A simple study timer that helps students plan, track, and adjust study time by class.  
+A simple study timer that helps  plan, track, and adjust study time by section.  
 **Phase 1 goal:** a reliable countdown timer 
 
 ## Why
