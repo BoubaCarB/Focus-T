@@ -21,12 +21,11 @@ def start_timer():
     minutes = simpledialog.askinteger("Start Timer", "Minutes:", minvalue=1)
     if minutes is None:
         return
-    # Run  timer in the background so the window stays responsive
+    # timer in the background so the window stays responsive
     t = Timer()
     threading.Thread(target=t.start, args=(minutes,), daemon=True).start()
     
-timer_btn = tk.Button(root, text="Timer", width=12, command=start_timer)
-timer_btn.pack(pady=10)
+
 
 welcome_label.pack(pady=40)
 
