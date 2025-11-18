@@ -1,4 +1,4 @@
-# main
+# main.py
 
 from timer import Timer
 from methods import choose_mins_presets

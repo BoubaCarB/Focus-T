@@ -1,6 +1,8 @@
 # timer.py
-import time # for the time running
+
+from threading import time # for the time running
 import threading # allow user unput while backround running
+
 
 class Timer:
     def __init__(self):
